@@ -94,6 +94,10 @@ h3 {
    ============================================ */
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
   background: var(--dark);
   padding: 1rem 3rem;
 }
@@ -813,4 +817,5 @@ h3 {
     text-align: center;
   }
 }
+
 
