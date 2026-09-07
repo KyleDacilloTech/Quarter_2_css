@@ -1,0 +1,192 @@
+/* ============================================
+   BREW HAVEN — CONTACT PAGE
+   ============================================ */
+
+/* ============================================
+   CONTACT HERO (full-bleed background)
+   ============================================ */
+
+.contact-hero {
+  position: relative;
+  min-height: 380px;
+
+  background-image: url("images/cappuccino.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  padding: 4rem 3rem;
+
+  max-width: 1300px;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+.contact-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.contact-hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+}
+
+.contact-hero-text h1 {
+  font-size: 2.6rem;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+
+.contact-hero-text .mail-icon {
+  color: var(--tan);
+}
+
+.contact-hero-text p {
+  color: #D8CFC5;
+  font-size: 1rem;
+}
+
+
+/* ============================================
+   CONTACT CONTENT (3 columns)
+   ============================================ */
+
+.contact-content {
+  background: var(--cream);
+
+  max-width: 1100px;
+  margin: 0 auto;
+
+  padding: 3.5rem 2rem;
+
+  display: flex;
+  gap: 2.5rem;
+}
+
+.contact-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-col h2 {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: var(--brown-text);
+  margin-bottom: 1.2rem;
+}
+
+
+/* Get in touch */
+
+.contact-details {
+  list-style: none;
+}
+
+.contact-details li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+
+  font-size: 0.9rem;
+  color: var(--brown-text);
+  margin-bottom: 1.1rem;
+  line-height: 1.4;
+}
+
+.detail-icon {
+  flex-shrink: 0;
+}
+
+.follow-label {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--tan-dark);
+  margin: 1.5rem 0 0.8rem;
+}
+
+
+/* Send us a message */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(58, 42, 30, 0.2);
+  border-radius: 6px;
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--brown-text);
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--tan);
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
+
+/* Find us */
+
+.map-frame {
+  width: 100%;
+  height: 260px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+/* ============================================
+   CONTACT PAGE — TABLET
+   ============================================ */
+
+@media (max-width: 960px) {
+
+  .contact-hero {
+    min-height: 340px;
+    padding: 3rem 2rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+
+/* ============================================
+   CONTACT PAGE — MOBILE
+   ============================================ */
+
+@media (max-width: 640px) {
+
+  .contact-hero {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .contact-hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .contact-content {
+    padding: 2.5rem 1.25rem;
+  }
+}
