@@ -1,0 +1,200 @@
+/* ============================================
+   BREW HAVEN — GALLERY PAGE
+   ============================================ */
+
+/* ============================================
+   GALLERY HERO (full-bleed background, like Menu/About)
+   ============================================ */
+
+.gallery-hero {
+  position: relative;
+  min-height: 400px;
+
+  background-image: url("images/cafe-interior.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  padding: 4rem 3rem;
+
+  max-width: 1300px;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+.gallery-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.gallery-hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+}
+
+.gallery-hero-text h1 {
+  font-size: 2.6rem;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+
+.gallery-hero-text .camera-icon {
+  color: var(--tan);
+}
+
+.gallery-hero-text p {
+  color: #D8CFC5;
+  font-size: 1rem;
+}
+
+
+/* ============================================
+   GALLERY GRID
+   ============================================ */
+
+.gallery-grid-section {
+  background: var(--cream);
+  padding: 3rem 2rem 4rem;
+}
+
+.gallery-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  flex: 1 1 calc(25% - 1.2rem);
+  min-width: 200px;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+
+/* ============================================
+   WATCH & LISTEN (video + audio)
+   ============================================ */
+
+.media-section {
+  background: var(--cream);
+  padding: 0 2rem 4rem;
+  text-align: center;
+}
+
+.media-section h2 {
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  color: var(--brown-text);
+  margin-bottom: 2rem;
+}
+
+.media-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.media-card {
+  flex: 1 1 320px;
+  min-width: 280px;
+
+  background: var(--white);
+  border-radius: 10px;
+  padding: 1.5rem;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.media-label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--brown-text);
+  margin-bottom: 0.9rem;
+  text-align: left;
+}
+
+.media-card video {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  background: var(--dark);
+}
+
+.media-card audio {
+  width: 100%;
+  display: block;
+}
+
+
+/* ============================================
+   GALLERY PAGE — TABLET
+   ============================================ */
+
+@media (max-width: 960px) {
+
+  .gallery-hero {
+    min-height: 380px;
+    padding: 3rem 2rem;
+  }
+
+  .gallery-item {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+}
+
+
+/* ============================================
+   GALLERY PAGE — MOBILE
+   ============================================ */
+
+@media (max-width: 640px) {
+
+  .gallery-hero {
+    min-height: 340px;
+    padding: 2.5rem 1.25rem;
+  }
+
+  .gallery-hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .gallery-grid-section {
+    padding: 2.5rem 1.25rem 3rem;
+  }
+
+  .gallery-grid {
+    gap: 1rem;
+  }
+
+  .gallery-item {
+    flex: 1 1 calc(50% - 0.75rem);
+  }
+}

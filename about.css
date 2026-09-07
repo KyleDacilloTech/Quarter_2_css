@@ -1,0 +1,300 @@
+/* ============================================
+   BREW HAVEN — ABOUT PAGE
+   ============================================ */
+
+/* ============================================
+   ABOUT HERO (full-bleed background, like Menu/Home)
+   ============================================ */
+
+.about-hero {
+  position: relative;
+  min-height: 400px;
+
+  background-image: url("images/cafe-interior.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  padding: 4rem 3rem;
+
+  max-width: 1300px;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.about-hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+}
+
+.about-hero-text h1 {
+  font-size: 2.6rem;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+
+.about-hero-text .heart-icon {
+  color: var(--tan);
+}
+
+.about-hero-text p {
+  color: #D8CFC5;
+  font-size: 1rem;
+}
+
+
+/* ============================================
+   OUR STORY
+   ============================================ */
+
+.our-story {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  padding: 4rem 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.our-story-image {
+  flex: 1;
+  max-width: 480px;
+
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.our-story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.our-story-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.our-story-text h2 {
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  color: var(--tan-dark);
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-bottom: 0.6rem;
+}
+
+.our-story-text h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--tan);
+}
+
+.our-story-text p {
+  color: var(--brown-text);
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+
+/* ============================================
+   MISSION / VISION / VALUES
+   ============================================ */
+
+.mvv {
+  background: var(--cream);
+
+  max-width: 1100px;
+  margin: 0 auto;
+
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(58, 42, 30, 0.12);
+
+  display: flex;
+  gap: 2rem;
+  text-align: center;
+}
+
+.mvv-item {
+  flex: 1;
+  min-width: 0;
+}
+
+.mvv-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 56px;
+  height: 56px;
+
+  border-radius: 50%;
+  border: 1px solid var(--tan);
+
+  font-size: 1.4rem;
+
+  margin-bottom: 1rem;
+}
+
+.mvv-item h3 {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--brown-text);
+  margin-bottom: 0.6rem;
+}
+
+.mvv-item p {
+  font-size: 0.85rem;
+  color: #5C4B3A;
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+
+/* ============================================
+   MEET OUR BARISTAS
+   ============================================ */
+
+.baristas {
+  background: var(--cream);
+  padding: 3rem 2rem 4rem;
+  text-align: center;
+}
+
+.baristas h2 {
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  color: var(--brown-text);
+  margin-bottom: 2.5rem;
+}
+
+.baristas-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.barista-card {
+  flex: 0 1 140px;
+}
+
+.barista-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 1rem;
+
+  border-radius: 50%;
+  background: linear-gradient(160deg, var(--tan), var(--tan-dark));
+  border: 3px solid var(--dark-soft);
+}
+
+.barista-avatar span {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--dark);
+}
+
+.barista-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--brown-text);
+  margin-bottom: 0.2rem;
+}
+
+.barista-role {
+  font-size: 0.8rem;
+  color: #8A7A68;
+}
+
+
+/* ============================================
+   ABOUT PAGE — TABLET
+   ============================================ */
+
+@media (max-width: 960px) {
+
+  .about-hero {
+    min-height: 380px;
+    padding: 3rem 2rem;
+  }
+
+  .our-story {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .our-story-text h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mvv {
+    flex-wrap: wrap;
+  }
+
+  .mvv-item {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+
+/* ============================================
+   ABOUT PAGE — MOBILE
+   ============================================ */
+
+@media (max-width: 640px) {
+
+  .about-hero {
+    min-height: 340px;
+    padding: 2.5rem 1.25rem;
+  }
+
+  .about-hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .mvv {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .baristas-grid {
+    gap: 2rem;
+  }
+
+  .barista-card {
+    flex: 0 1 120px;
+  }
+
+  .barista-avatar {
+    width: 90px;
+    height: 90px;
+  }
+}
